@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>FAQ Generator Demo</title>
+    <link rel="stylesheet" href="faq-generator/faq-generator.css" />
+</head>
+<style>
+
+</style>
+<body>
+    <ul id="faq-list">
+        <li>
+            <div>
+                This is a question
+            </div>
+            <div>
+                This is an answer
+            </div>
+        </li>
+        <li>
+            <div>
+                This is a question
+            </div>
+            <div>
+                This is an answer
+            </div>
+        </li>
+        <li>
+            <div>
+                This is a question
+            </div>
+            <div>
+                This is an answer
+            </div>
+        </li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="faq-generator/faq-generator.min.js"></script>
+    <script>
+        $("#faq-list").faqGenerator({
+            startOpen: true
+        });
+    </script>
+</body>
+</html>

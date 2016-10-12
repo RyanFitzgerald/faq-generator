@@ -1,0 +1,23 @@
+{
+  "name": "faq-generator",
+  "description": "Automatic FAQ JavaScript Generator",
+  "main": "index.html",
+  "authors": [
+    "Ryan Fitzgerald"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "faq",
+    "generator",
+    "javascript",
+    "automatic"
+  ],
+  "homepage": "https://github.com/RyanFitzgerald/faq-generator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
