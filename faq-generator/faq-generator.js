@@ -18,7 +18,8 @@
         var settings = $.extend({
             theme: null,
             limitOne: false,
-            startOpen: false
+            startOpen: false,
+            icon: false
         }, options);
 
         // Allow chaining and process each DOM node
@@ -33,6 +34,9 @@
             $this.find("li > div:first-child").addClass("faqgen-question");
             $this.find("li > div:last-child").addClass("faqgen-answer");
 
+            // Store reference to items
+            var $items = $this.find(".faqgen-item");
+
             // Store reference to questions
             var $questions = $(this).find(".faqgen-question");
 
@@ -44,11 +48,21 @@
                 $this.addClass(settings.theme);
             }
 
+            // Add icons if set to true
+            if (settings.icon) {
+
+                $questions.each(function() {
+                    $(this).prepend("<div class='faqgen-icon'></div>");
+                });
+
+            }
+
             // Hide all answers unless start set to true
             if (!settings.startOpen || settings.limitOne) {
                 $answers.hide();
             } else {
                 $answers.addClass("active");
+                $this.find(".faqgen-icon").addClass("active");
             }
 
             // Handle click functionality
@@ -65,21 +79,25 @@
                     // Remove active question
                     $(this).siblings(".faqgen-answer").slideToggle(300).toggleClass("active");
 
+                    // Remove active icon
+                    $icon.toggleClass("active");
+
                 } else {
 
                     // Remove previous active question
                     if (settings.limitOne) {
-                        $this.find(".active").slideToggle(300).toggleClass("active");
+                        $this.find("facgen-answer.active").slideToggle(300).toggleClass("active");
+                        $this.find("facgen-icon.active").toggleClass("active");
                     }
 
                     // Slide down and toggle active class
                     $sibling.slideToggle(300).toggleClass("active");
 
+                    // Remove active icon
+                    $icon.toggleClass("active");
+
                 }
 
-                // TO DO - Change icon
-
-                // TO DO - Add open all button functionality (data-faq=ID of one to open)
 
             });
 
