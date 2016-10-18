@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tag Cloud - Demo Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link rel="stylesheet" href="css/faq-generator.css">
+</head>
+<style>
+    body {
+        padding: 15px;
+    }
+</style>
+<body>
+    <h1>FAQ Generator Demo</h1>
+    <h3><a href="index.html">Back to docs</a></h3>
+    <hr />
+    <h2>Default Settings</h2>
+    <ul id="faq-list">
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+	</ul>
+	<h2>Limit One Open Answer</h2>
+    <ul id="faq-list2">
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+	</ul>
+	<h2>Start Open</h2>
+    <ul id="faq-list3">
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+	</ul>
+	<h2>Basic Theme + Icon</h2>
+    <ul id="faq-list4">
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+	</ul>
+	<h2>Material Theme + Icon + Limit One</h2>
+    <ul id="faq-list5">
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+		<li>
+			<div>
+				This is a question
+			</div>
+			<div>
+				This is an answer
+			</div>
+		</li>
+	</ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/faq-generator.min.js"></script>
+    <script>
+        $('#faq-list').faqGenerator();
+		$('#faq-list2').faqGenerator({
+			limitOne: true
+		});
+		$('#faq-list3').faqGenerator({
+			startOpen: true
+		});
+		$('#faq-list4').faqGenerator({
+			theme: 'basic',
+			icon: true
+		});
+		$('#faq-list5').faqGenerator({
+			theme: 'material',
+			icon: true,
+			limitOne: true
+		});
+    </script>
+</body>
+</html>
