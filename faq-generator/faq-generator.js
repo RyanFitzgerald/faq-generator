@@ -86,8 +86,8 @@
 
                     // Remove previous active question
                     if (settings.limitOne) {
-                        $this.find("facgen-answer.active").slideToggle(300).toggleClass("active");
-                        $this.find("facgen-icon.active").toggleClass("active");
+                        $this.find(".faqgen-answer.active").slideToggle(300).toggleClass("active");
+                        $this.find(".faqgen-icon.active").toggleClass("active");
                     }
 
                     // Slide down and toggle active class
